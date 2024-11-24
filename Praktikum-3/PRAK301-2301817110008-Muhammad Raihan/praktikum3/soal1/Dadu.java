@@ -6,15 +6,15 @@ public class Dadu {
 	private int angkaDadu;
 	
 	public Dadu() {
-		this.angkaDadu = 0;
+		this.angkaDadu = acakNilai();
 	}
 	
-	public void AcakNilai() {
+	private int acakNilai() {
 		Random rand = new Random();
 		int max = 6;
 		int min = 1;
 		int hasil = rand.nextInt(max - min + 1) + min;
-		this.angkaDadu = hasil;
+		return hasil;
 	}
 	
 	public int getAngkaDadu() {

@@ -12,7 +12,6 @@ public class Main {
 		
 		for(int i = 0; i < jumlahDadu; i++) {
 			Dadu dadu1 = new Dadu();
-			dadu1.AcakNilai();
 			System.out.printf("Dadu ke-%d bernilai %d\n", i+1, dadu1.getAngkaDadu());
 			totalNilai += dadu1.getAngkaDadu();
 		}
