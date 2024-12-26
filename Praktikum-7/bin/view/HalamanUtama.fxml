@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="582.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HalamanUtamaController">
+   <children>
+      <VBox layoutX="14.0" prefHeight="456.0" prefWidth="603.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="584.0" prefWidth="603.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Data Pelanggan">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="468.0" prefWidth="603.0">
+                           <children>
+                              <VBox layoutX="28.0" layoutY="24.0" prefHeight="137.0" prefWidth="124.0" spacing="20.0">
+                                 <children>
+                                    <Label text="ID Pelanggan">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Nama Pelanggan">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Email">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Telepon">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="163.0" layoutY="22.0" prefHeight="137.0" prefWidth="261.0" spacing="12.0">
+                                 <children>
+                                    <TextField fx:id="fieldIdPelanggan" />
+                                    <TextField fx:id="fieldNamaPelanggan" />
+                                    <TextField fx:id="fieldEmailPelanggan" />
+                                    <TextField fx:id="fieldTeleponPelanggan" />
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="28.0" layoutY="179.0" prefHeight="34.0" prefWidth="235.0" spacing="25.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addDataPelanggan" text="Tambah" />
+                                    <Button mnemonicParsing="false" onAction="#updateDataPelanggan" text="Perbarui" />
+                                    <Button mnemonicParsing="false" onAction="#deleteDataPelanggan" text="Hapus" />
+                                 </children>
+                              </HBox>
+                              <Button layoutX="467.0" layoutY="69.0" mnemonicParsing="false" onAction="#clearFieldPelanggan" prefHeight="44.0" prefWidth="73.0" text="Bersihkan" />
+                              <TableView fx:id="tablePelanggan" layoutX="1.0" layoutY="222.0" prefHeight="330.0" prefWidth="603.0">
+                                <columns>
+                                  <TableColumn fx:id="clmIdPelanggan" prefWidth="93.0" text="ID Pelanggan" />
+                                  <TableColumn fx:id="clmNamaPelanggan" prefWidth="202.0" text="Nama Pelanggan" />
+                                    <TableColumn fx:id="clmEmailPelanggan" minWidth="0.0" prefWidth="152.0" text="Email" />
+                                    <TableColumn fx:id="clmTeleponPelanggan" prefWidth="154.0" text="Telepon" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Data Alat Elektronik">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="28.0" layoutY="24.0" prefHeight="153.0" prefWidth="126.0" spacing="20.0">
+                                 <children>
+                                    <Label text="ID Barang">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Nama Barang">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Merek">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Harga">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="144.0" layoutY="22.0" prefHeight="137.0" prefWidth="261.0" spacing="12.0">
+                                 <children>
+                                    <TextField fx:id="fieldIdBarang" />
+                                    <TextField fx:id="fieldNamaBarang" />
+                                    <TextField fx:id="fieldMerekBarang" />
+                                    <TextField fx:id="fieldHargaBarang" />
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="28.0" layoutY="179.0" prefHeight="34.0" prefWidth="235.0" spacing="25.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addDataBarang" text="Tambah" />
+                                    <Button mnemonicParsing="false" onAction="#updateDataBarang" text="Perbarui" />
+                                    <Button mnemonicParsing="false" onAction="#deleteDataBarang" text="Hapus" />
+                                 </children>
+                              </HBox>
+                              <Button layoutX="467.0" layoutY="69.0" mnemonicParsing="false" onAction="#clearFieldBarang" prefHeight="44.0" prefWidth="73.0" text="Bersihkan" />
+                              <TableView fx:id="tableBarang" layoutX="1.0" layoutY="222.0" prefHeight="330.0" prefWidth="603.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmIdBarang" prefWidth="93.0" text="ID Barang" />
+                                    <TableColumn fx:id="clmNamaBarang" prefWidth="202.0" text="Nama Barang" />
+                                    <TableColumn fx:id="clmMerekBarang" minWidth="0.0" prefWidth="152.0" text="Merek" />
+                                    <TableColumn fx:id="clmHargaBarang" prefWidth="154.0" text="Harga" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Data Penjualan">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="28.0" layoutY="24.0" prefHeight="137.0" prefWidth="109.0" spacing="19.0">
+                                 <children>
+                                    <Label text="ID Penjualan">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Jumlah">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Tanggal">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="ID Pelanggan">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="ID Barang">
+                                       <font>
+                                          <Font name="Verdana" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="144.0" layoutY="22.0" prefHeight="214.0" prefWidth="261.0" spacing="12.0">
+                                 <children>
+                                    <TextField fx:id="fieldIdPenjualan" />
+                                    <TextField fx:id="fieldJumlah" />
+                                    <DatePicker fx:id="pickTanggal" prefHeight="25.0" prefWidth="290.0" promptText="-- Pilih Tanggal --" />
+                                    <ComboBox fx:id="comboIdPelanggan" prefHeight="25.0" prefWidth="261.0" promptText="-- Pilih Pelanggan --" />
+                                    <ComboBox fx:id="comboIdBarang" prefHeight="25.0" prefWidth="263.0" promptText="-- Pilih Barang --" />
+                                 </children>
+                              </VBox>
+                              <HBox layoutX="27.0" layoutY="211.0" prefHeight="34.0" prefWidth="235.0" spacing="25.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#addDataPenjualan" text="Tambah" />
+                                    <Button mnemonicParsing="false" onAction="#updateDataPenjualan" text="Perbarui" />
+                                    <Button mnemonicParsing="false" onAction="#deleteDataPenjualan" text="Hapus" />
+                                 </children>
+                              </HBox>
+                              <Button layoutX="457.0" layoutY="92.0" mnemonicParsing="false" onAction="#clearFieldPenjualan" prefHeight="44.0" prefWidth="73.0" text="Bersihkan" />
+                              <TableView fx:id="tablePenjualan" layoutX="1.0" layoutY="251.0" prefHeight="301.0" prefWidth="603.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmIdPenjualan" prefWidth="93.0" text="ID Penjualan" />
+                                    <TableColumn fx:id="clmJumlah" prefWidth="74.0" text="Jumlah" />
+                                    <TableColumn fx:id="clmTotalHarga" minWidth="0.0" prefWidth="154.0" text="Total Harga" />
+                                    <TableColumn fx:id="clmTanggalPenjualan" prefWidth="111.0" text="Tanggal" />
+                                    <TableColumn fx:id="clmIdPelangganFK" prefWidth="89.0" text="ID Pelanggan" />
+                                    <TableColumn fx:id="clmIdBarangFK" prefWidth="79.0" text="ID Barang" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
